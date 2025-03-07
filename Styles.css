@@ -1,0 +1,50 @@
+@import 'compass/css3';
+// $bg: #122139;
+$bg: white;
+$letters: 18;
+$bubbles: 40;
+$roses: 7;
+$pedals: 7;
+$rose1 : #d52d58;
+$rose2: #9e183a;
+$rose3: #b81b43;
+$rose4 :#c9204b;
+
+@function randomNum($min, $max) {
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+  @return $randomNum;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{"$animationName"} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animationName} {
+    @content;
+  }
+
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	background: $bg;
+	overflow:hidden;
+}
+
+.container 
+{
+	display: None;
+    	width: 100px;
+    	height: 300px;
+	position: absolute;
+	left: 0;
